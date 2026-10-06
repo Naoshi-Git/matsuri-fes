@@ -1,0 +1,14 @@
+title: Matsuri FES
+description: Independent projects by Matsuri FES
+url: https://naoshi-git.github.io
+baseurl: /matsuri-fes
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor

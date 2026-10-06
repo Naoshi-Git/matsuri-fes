@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2ec">
+  <title>{{ page.title }} — Sailing KOBE</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body class="reading-page">
+  <header class="masthead reading-masthead">
+    <a class="wordmark" href="{{ '/' | relative_url }}">
+      <span class="wordmark-dot" aria-hidden="true"></span>
+      <span>MATSURI FES <small>PROJECTS</small></span>
+    </a>
+    <nav class="top-links" aria-label="パンくず">
+      <a href="{{ '/' | relative_url }}">Projects</a><span aria-hidden="true">/</span>
+      <a href="{{ '/sites/sailing/career/' | relative_url }}">Sailing KOBE</a>
+    </nav>
+  </header>
+  <div class="reader-intro">
+    <a class="back-link" href="{{ '/' | relative_url }}">← プロジェクト一覧へ</a>
+    <div class="reader-title-row">
+      <img class="brand-mark" src="{{ '/assets/sailing-logo.png' | relative_url }}" alt="Sailing KOBEのロゴ">
+      <div>
+        <p class="eyebrow">SAILING KOBE <span>／</span> CAREER BOOK</p>
+        <h1>{{ page.book_title }}</h1>
+        <p class="reader-deck">{{ page.description }}</p>
+      </div>
+    </div>
+  </div>
+  <nav class="book-switcher" aria-label="就活対策BOOK">
+    <a class="{% if page.book_key == 'guide' %}is-current{% endif %}" href="{{ '/sites/sailing/career/' | relative_url }}"><span>01</span> 対策BOOK</a>
+    <a class="{% if page.book_key == 'es' %}is-current{% endif %}" href="{{ '/sites/sailing/career/es-questions/' | relative_url }}"><span>02</span> 企業別ES設問集</a>
+    <a class="{% if page.book_key == 'interview' %}is-current{% endif %}" href="{{ '/sites/sailing/career/interview-questions/' | relative_url }}"><span>03</span> 企業別面接問答集</a>
+  </nav>
+  <div class="reading-grid">
+    <aside class="reading-rail">
+      <details class="toc-panel" open>
+        <summary>この冊子の目次 <span class="toc-count" id="toc-count"></span></summary>
+        <nav id="toc" aria-label="この冊子の目次"></nav>
+      </details>
+      <div class="rail-note">
+        <span class="rail-rule"></span>
+        <p>役職ではなく、<br>自分が動かした仕事から。</p>
+        <span class="rail-caption">Sailing KOBE · CAREER</span>
+      </div>
+    </aside>
+    <main class="book-content">
+      <div class="book-meta">
+        <span class="book-number">{{ page.book_number }}</span>
+        <span>{{ page.book_type }}</span>
+        <span class="meta-date">2026.10</span>
+      </div>
+      <article class="prose" id="book-content">{{ content }}</article>
+      <nav class="book-bottom-nav" aria-label="冊子間の移動">
+        <a href="{{ '/sites/sailing/career/' | relative_url }}">01　対策BOOK</a>
+        <a href="{{ '/sites/sailing/career/es-questions/' | relative_url }}">02　企業別ES設問集</a>
+        <a href="{{ '/sites/sailing/career/interview-questions/' | relative_url }}">03　企業別面接問答集</a>
+      </nav>
+    </main>
+  </div>
+  <footer class="site-footer reading-footer">
+    <a href="{{ '/' | relative_url }}">Matsuri FES Projects</a>
+    <span>Sailing KOBE · 就活対策資料</span>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'instant'});return false;">ページ上部 ↑</a>
+  </footer>
+  <script>
+  (() => {
+    const article = document.getElementById('book-content');
+    const toc = document.getElementById('toc');
+    if (!article || !toc) return;
+    const headings = [...article.querySelectorAll('h2, h3')];
+    const slug = text => text.toLowerCase().replace(/[｜：、。！？「」『』（）()\s]+/g, '-').replace(/^-|-$/g, '');
+    const counts = {};
+    const list = document.createElement('ol');
+    headings.forEach((heading, index) => {
+      let id = heading.id || slug(heading.textContent) || 'section';
+      counts[id] = (counts[id] || 0) + 1;
+      if (counts[id] > 1) id += '-' + counts[id];
+      heading.id = id;
+      const item = document.createElement('li');
+      if (heading.tagName === 'H3') item.className = 'toc-sub';
+      const link = document.createElement('a');
+      link.href = '#' + id;
+      link.textContent = heading.textContent;
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    toc.appendChild(list);
+    const count = document.getElementById('toc-count');
+    if (count) count.textContent = String(headings.length).padStart(2, '0');
+    if (!headings.length) document.querySelector('.toc-panel').hidden = true;
+  })();
+  </script>
+</body>
+</html>
