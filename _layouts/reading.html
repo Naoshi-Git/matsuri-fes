@@ -3,85 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f2ec">
+  <meta name="theme-color" content="#faf9f5">
   <title>{{ page.title }} — Sailing KOBE</title>
   <meta name="description" content="{{ page.description }}">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body class="reading-page" id="top">
-  <header class="masthead reading-masthead">
-    <a class="wordmark" href="{{ '/' | relative_url }}">
-      <span class="wordmark-dot" aria-hidden="true"></span>
-      <span>MATSURI FES <small>PROJECTS</small></span>
-    </a>
-    <nav class="top-links" aria-label="パンくず">
-      <a href="{{ '/' | relative_url }}">Projects</a><span aria-hidden="true">/</span>
-      <a href="{{ '/sites/sailing/career/' | relative_url }}">Sailing KOBE</a>
-    </nav>
-  </header>
-  <div class="reader-intro">
-    <a class="back-link" href="{{ '/' | relative_url }}">← プロジェクト一覧へ</a>
-    <div class="reader-title-row">
-      <img class="brand-mark" src="{{ '/assets/sailing-logo.png' | relative_url }}" alt="Sailing KOBEのロゴ">
-      <div>
-        <p class="eyebrow">SAILING KOBE <span>／</span> CAREER BOOK</p>
-        <h1>{{ page.book_title }}</h1>
-        <p class="reader-deck">{{ page.description }}</p>
+  <main class="access-gate" id="access-gate">
+    <img src="{{ '/assets/sailing-logo.svg' | relative_url }}" alt="" class="gate-mark">
+    <p class="eyebrow">SAILING KOBE <span>／</span> CAREER BOOKS</p>
+    <h1>Sailing就活</h1>
+    <p class="gate-note">閲覧にはパスワードが必要です。公開期間は2026年10月22日まで。</p>
+    <form id="access-form">
+      <label for="access-password">パスワード</label>
+      <div class="password-row">
+        <input id="access-password" type="password" autocomplete="current-password" required>
+        <button type="submit">読む</button>
+      </div>
+      <p id="access-message" role="status" aria-live="polite"></p>
+    </form>
+    <span class="gate-credit">© 祭りフェス実行委員会</span>
+  </main>
+
+  <div id="reader-site" hidden>
+    <header class="sailing-bar">
+      <a class="sailing-wordmark" href="{{ '/sites/sailing/career/' | relative_url }}">
+        <img src="{{ '/assets/sailing-logo.svg' | relative_url }}" alt="">
+        <span>SAILING KOBE<small>CAREER BOOKS</small></span>
+      </a>
+      <span class="bar-note">就活対策資料　·　2026</span>
+    </header>
+
+    <div class="reader-intro">
+      <div class="reader-title-row">
+        <div>
+          <p class="eyebrow">SAILING KOBE <span>／</span> CAREER BOOK <span class="book-index"> {{ page.book_number }}</span></p>
+          <h1>{{ page.book_title }}</h1>
+          <p class="reader-deck">{{ page.description }}</p>
+        </div>
       </div>
     </div>
+
+    <nav class="book-switcher" aria-label="就活対策BOOK">
+      <a class="{% if page.book_key == 'guide' %}is-current{% endif %}" href="{{ '/sites/sailing/career/' | relative_url }}"><span>01</span> 対策BOOK</a>
+      <a class="{% if page.book_key == 'es' %}is-current{% endif %}" href="{{ '/sites/sailing/career/es-questions/' | relative_url }}"><span>02</span> 企業別ES設問集</a>
+      <a class="{% if page.book_key == 'interview' %}is-current{% endif %}" href="{{ '/sites/sailing/career/interview-questions/' | relative_url }}"><span>03</span> 企業別面接問答集</a>
+    </nav>
+
+    <div class="reading-grid">
+      <aside class="reading-rail">
+        <details class="toc-panel">
+          <summary>章から読む <span class="toc-count" id="toc-count"></span></summary>
+          <nav id="toc" aria-label="章から読む"></nav>
+        </details>
+        <div class="rail-note">
+          <span class="rail-rule"></span>
+          <p>自分が動かした仕事から、<br>経験を言葉にする。</p>
+          <span class="rail-caption">SAILING KOBE · CAREER</span>
+        </div>
+      </aside>
+      <main class="book-content">
+        <div class="book-meta">
+          <span class="book-number">{{ page.book_number }}</span>
+          <span>{{ page.book_type }}</span>
+          <span class="meta-date">公開期限 10.22</span>
+        </div>
+        <article class="prose" id="book-content">{{ content }}</article>
+        <nav class="book-bottom-nav" aria-label="冊子間の移動">
+          <a href="{{ '/sites/sailing/career/' | relative_url }}">01　対策BOOK</a>
+          <a href="{{ '/sites/sailing/career/es-questions/' | relative_url }}">02　企業別ES設問集</a>
+          <a href="{{ '/sites/sailing/career/interview-questions/' | relative_url }}">03　企業別面接問答集</a>
+        </nav>
+      </main>
+    </div>
+    <footer class="site-footer reading-footer">
+      <span>© 祭りフェス実行委員会</span>
+      <span>Sailing KOBE · 就活対策資料</span>
+      <a href="#top" onclick="window.scrollTo({top:0,behavior:'instant'});return false;">上へ戻る ↑</a>
+    </footer>
   </div>
-  <nav class="book-switcher" aria-label="就活対策BOOK">
-    <a class="{% if page.book_key == 'guide' %}is-current{% endif %}" href="{{ '/sites/sailing/career/' | relative_url }}"><span>01</span> 対策BOOK</a>
-    <a class="{% if page.book_key == 'es' %}is-current{% endif %}" href="{{ '/sites/sailing/career/es-questions/' | relative_url }}"><span>02</span> 企業別ES設問集</a>
-    <a class="{% if page.book_key == 'interview' %}is-current{% endif %}" href="{{ '/sites/sailing/career/interview-questions/' | relative_url }}"><span>03</span> 企業別面接問答集</a>
-  </nav>
-  <div class="reading-grid">
-    <aside class="reading-rail">
-      <details class="toc-panel" open>
-        <summary>この冊子の目次 <span class="toc-count" id="toc-count"></span></summary>
-        <nav id="toc" aria-label="この冊子の目次"></nav>
-      </details>
-      <div class="rail-note">
-        <span class="rail-rule"></span>
-        <p>役職ではなく、<br>自分が動かした仕事から。</p>
-        <span class="rail-caption">Sailing KOBE · CAREER</span>
-      </div>
-    </aside>
-    <main class="book-content">
-      <div class="book-meta">
-        <span class="book-number">{{ page.book_number }}</span>
-        <span>{{ page.book_type }}</span>
-        <span class="meta-date">2026.10</span>
-      </div>
-      <article class="prose" id="book-content">{{ content }}</article>
-      <nav class="book-bottom-nav" aria-label="冊子間の移動">
-        <a href="{{ '/sites/sailing/career/' | relative_url }}">01　対策BOOK</a>
-        <a href="{{ '/sites/sailing/career/es-questions/' | relative_url }}">02　企業別ES設問集</a>
-        <a href="{{ '/sites/sailing/career/interview-questions/' | relative_url }}">03　企業別面接問答集</a>
-      </nav>
-    </main>
-  </div>
-  <footer class="site-footer reading-footer">
-    <a href="{{ '/' | relative_url }}">Matsuri FES Projects</a>
-    <span>Sailing KOBE · 就活対策資料</span>
-    <a href="#top" onclick="window.scrollTo({top:0,behavior:'instant'});return false;">ページ上部 ↑</a>
-  </footer>
+  <div class="print-watermark" aria-hidden="true">複製禁止　© 祭りフェス実行委員会</div>
+
   <script>
   (() => {
+    const end = new Date('2026-10-22T23:59:59+09:00').getTime();
+    const gate = document.getElementById('access-gate');
+    const reader = document.getElementById('reader-site');
+    const form = document.getElementById('access-form');
+    const message = document.getElementById('access-message');
+    const reveal = () => { gate.hidden = true; reader.hidden = false; };
+    if (Date.now() > end) {
+      form.hidden = true;
+      message.textContent = 'この資料のWeb公開期間は終了しました。';
+      return;
+    }
+    if (sessionStorage.getItem('sailing-career-access') === 'ok') reveal();
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const value = document.getElementById('access-password').value;
+      const bytes = new TextEncoder().encode(value);
+      const digest = await crypto.subtle.digest('SHA-256', bytes);
+      const hash = [...new Uint8Array(digest)].map(n => n.toString(16).padStart(2, '0')).join('');
+      if (hash === 'de6c2cab5e001e28e85846700ffef3b53dff59617d6b3e2800f3c11cf12a3fbc') {
+        sessionStorage.setItem('sailing-career-access', 'ok');
+        reveal();
+      } else {
+        message.textContent = 'パスワードを確認してください。';
+      }
+    });
+
     const article = document.getElementById('book-content');
     const toc = document.getElementById('toc');
     if (!article || !toc) return;
-    const headings = [...article.querySelectorAll('h2, h3')];
+    const chapters = [...article.querySelectorAll('h1')].filter((h, i) => i > 0);
     const slug = text => text.toLowerCase().replace(/[｜：、。！？「」『』（）()\s]+/g, '-').replace(/^-|-$/g, '');
-    const counts = {};
     const list = document.createElement('ol');
-    headings.forEach((heading, index) => {
-      let id = heading.id || slug(heading.textContent) || 'section';
-      counts[id] = (counts[id] || 0) + 1;
-      if (counts[id] > 1) id += '-' + counts[id];
+    chapters.forEach((heading, index) => {
+      const id = heading.id || slug(heading.textContent) || 'chapter-' + (index + 1);
       heading.id = id;
       const item = document.createElement('li');
-      if (heading.tagName === 'H3') item.className = 'toc-sub';
       const link = document.createElement('a');
       link.href = '#' + id;
       link.textContent = heading.textContent;
@@ -90,12 +131,34 @@
     });
     toc.appendChild(list);
     const count = document.getElementById('toc-count');
-    if (count) count.textContent = String(headings.length).padStart(2, '0');
-    if (!headings.length) document.querySelector('.toc-panel').hidden = true;
+    if (count) count.textContent = String(chapters.length).padStart(2, '0');
+    if (!chapters.length) document.querySelector('.toc-panel').hidden = true;
     if (window.matchMedia('(max-width: 820px)').matches) {
       const panel = document.querySelector('.toc-panel');
       if (panel) panel.removeAttribute('open');
     }
+
+    article.querySelectorAll('table').forEach(table => {
+      const labels = [...table.querySelectorAll('thead th')].map(th => th.textContent.trim());
+      table.querySelectorAll('tbody tr').forEach(row => {
+        [...row.cells].forEach((cell, i) => cell.setAttribute('data-label', labels[i] || ''));
+      });
+      table.classList.add('responsive-cards');
+    });
+    article.querySelectorAll('p').forEach(p => {
+      const label = p.querySelector('strong:first-child');
+      if (!label) return;
+      const text = label.textContent.trim().replace(/[：:．.]/g, '');
+      if (/^(Q|質問|設問|問い|面接官)$/.test(text)) p.classList.add('qa-question');
+      if (/^(A|回答例|回答|返答)$/.test(text)) p.classList.add('qa-answer');
+    });
+
+    // Gentle deterrence only; this does not secure the public source files.
+    article.addEventListener('contextmenu', event => event.preventDefault());
+    article.addEventListener('copy', event => event.preventDefault());
+    article.addEventListener('keydown', event => {
+      if ((event.metaKey || event.ctrlKey) && ['c', 'p', 's', 'u'].includes(event.key.toLowerCase())) event.preventDefault();
+    });
   })();
   </script>
 </body>
