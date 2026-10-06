@@ -13,7 +13,7 @@ A new publication can be added as a sibling under `sites/`; it does not need to 
 
 ## Sailing career books
 
-The three Markdown files in `_includes/sites/sailing/career/` are verbatim copies of the distributable editions in the private authoring repository. They are included and rendered by the small page wrappers in `sites/sailing/career/`. Keep the source text unchanged when synchronizing; adjust only the wrapper metadata or shared layout when presentation needs to change.
+The career-book route is a password-gated PDF viewer. The combined PDF in `assets/sailing-career-book.pdf` is generated from the private authoring repository's HTML reader and displayed inside the site page; there is no download link in the page UI. The Markdown copies in `_includes/sites/sailing/career/` remain as source snapshots for reference, but the public route presents the PDF edition.
 
 To update an edition, replace its matching Markdown file in `_includes/sites/sailing/career/` with the corresponding distribution file from the authoring repository. Review the diff, then commit. The original source remains authoritative; this public copy is only the publishing mirror. Do not copy internal orientation or operational material into this public repository.
 

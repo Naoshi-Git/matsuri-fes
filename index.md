@@ -10,7 +10,6 @@ permalink: /
     <h1 class="hero-title">祭りをつくる。<br><em>その経験を、</em><br>次の力に。</h1>
     <p class="hero-deck">祭りの現場で生まれた仕事や知恵を、ひとつずつ読みやすい形に。</p>
   </div>
-  <img class="hero-mark" src="{{ '/assets/sailing-logo.png' | relative_url }}" alt="Sailing KOBEのロゴ">
 </section>
 <section class="project-index" aria-labelledby="project-heading">
   <div class="index-inner">
