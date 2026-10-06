@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Sailing KOBE">
+  <circle cx="60" cy="60" r="56.5" fill="#fffefa" stroke="#f87558" stroke-width="5"/>
+  <circle cx="60" cy="60" r="49" fill="none" stroke="#f87558" stroke-width="1.5"/>
+  <g fill="#f87558">
+    <circle cx="44" cy="24" r="2.5"/><circle cx="77" cy="27" r="2.5"/><circle cx="29" cy="42" r="2"/>
+    <path d="M59 27v35l-18 2 17-8 1-29zM62 31v31l17 2-16-8z"/>
+    <path d="M39 66q21-6 42 0l-3 6H42z"/>
+    <path d="M17 83c7-8 14-8 21 0s14 8 21 0 14-8 21 0 14 8 23 0v7c-9 8-17 8-24 0s-13-8-20 0-15 8-23 0-13-8-20 0z"/>
+    <path d="M23 96c7-7 14-7 21 0s14 7 21 0 14-7 21 0 14 7 21 0v5c-9 7-17 7-24 0s-13-7-20 0-15 7-23 0-13-7-20 0z"/>
+  </g>
+  <path d="M13 73c9-5 12-4 18 0m58 0c6-4 9-5 18 0" fill="none" stroke="#f87558" stroke-width="2" stroke-linecap="round"/>
+</svg>
