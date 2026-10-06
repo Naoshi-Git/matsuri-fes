@@ -8,5 +8,5 @@ book_key: interview
 description: よさこい経験に向けられる問いと答えの組み立て方。結論・背景・行動・結果・学びを、自分の言葉で。
 permalink: /sites/sailing/career/interview-questions/
 ---
-{% capture book_body %}{% include "sites/sailing/career/2026-10-06 Sailing就活_企業別面接問答集_配布版.md" %}{% endcapture %}
+{% capture book_body %}{% include _includes/sites/sailing/career/interview-questions-source.md %}{% endcapture %}
 {{ book_body | markdownify }}
