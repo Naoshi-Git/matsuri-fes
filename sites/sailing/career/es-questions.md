@@ -8,5 +8,5 @@ book_key: es
 description: 過去の選考設問を一般化した索引と回答例。設問の焦点から、自分の経験の使いどころを見つける。
 permalink: /sites/sailing/career/es-questions/
 ---
-{% capture book_body %}{% include _includes/sites/sailing/career/es-questions-source.md %}{% endcapture %}
+{% capture book_body %}{% include sites/sailing/career/es-questions-source.md %}{% endcapture %}
 {{ book_body | markdownify }}
