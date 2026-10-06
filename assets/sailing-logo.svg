@@ -2,11 +2,12 @@
   <circle cx="60" cy="60" r="56.5" fill="#fffefa" stroke="#f87558" stroke-width="5"/>
   <circle cx="60" cy="60" r="49" fill="none" stroke="#f87558" stroke-width="1.5"/>
   <g fill="#f87558">
-    <circle cx="44" cy="24" r="2.5"/><circle cx="77" cy="27" r="2.5"/><circle cx="29" cy="42" r="2"/>
-    <path d="M59 27v35l-18 2 17-8 1-29zM62 31v31l17 2-16-8z"/>
-    <path d="M39 66q21-6 42 0l-3 6H42z"/>
-    <path d="M17 83c7-8 14-8 21 0s14 8 21 0 14-8 21 0 14 8 23 0v7c-9 8-17 8-24 0s-13-8-20 0-15 8-23 0-13-8-20 0z"/>
-    <path d="M23 96c7-7 14-7 21 0s14 7 21 0 14-7 21 0 14 7 21 0v5c-9 7-17 7-24 0s-13-7-20 0-15 7-23 0-13-7-20 0z"/>
+    <circle cx="43" cy="20" r="2.3"/><circle cx="77" cy="24" r="2.3"/><circle cx="28" cy="39" r="1.8"/>
+    <circle cx="91" cy="43" r="1.8"/>
+    <path d="M58 17l-5 2 5 1v8c0 3-2 5-7 6l-20 4 23-1 4 3v16h-8l10 3 10-3h-8V40l4-4 23 1-20-4c-5-1-7-3-7-6v-8l5-2-4-1z"/>
+    <path d="M59 55c-18 0-34 7-40 17l8 18h66l8-18c-7-10-23-17-42-17z"/>
   </g>
-  <path d="M13 73c9-5 12-4 18 0m58 0c6-4 9-5 18 0" fill="none" stroke="#f87558" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 77q25-13 50 0M42 84q18-9 36 0" fill="none" stroke="#fffefa" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M14 82c7-8 14-8 21 0s14 8 21 0 14-8 21 0 14 8 23 0v7c-9 8-17 8-24 0s-13-8-20 0-15 8-23 0-13-8-20 0z" fill="#f87558" stroke="#fffefa" stroke-width="2"/>
+  <path d="M20 99c7-7 14-7 21 0s14 7 21 0 14-7 21 0 14 7 21 0" fill="none" stroke="#f87558" stroke-width="5" stroke-linecap="round"/>
 </svg>
