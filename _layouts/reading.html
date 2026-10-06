@@ -8,7 +8,7 @@
   <meta name="description" content="{{ page.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
-<body class="reading-page">
+<body class="reading-page" id="top">
   <header class="masthead reading-masthead">
     <a class="wordmark" href="{{ '/' | relative_url }}">
       <span class="wordmark-dot" aria-hidden="true"></span>
@@ -92,6 +92,10 @@
     const count = document.getElementById('toc-count');
     if (count) count.textContent = String(headings.length).padStart(2, '0');
     if (!headings.length) document.querySelector('.toc-panel').hidden = true;
+    if (window.matchMedia('(max-width: 820px)').matches) {
+      const panel = document.querySelector('.toc-panel');
+      if (panel) panel.removeAttribute('open');
+    }
   })();
   </script>
 </body>
