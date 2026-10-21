@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Everyone may read sanitized stage status and public announcements.
+    match /live/{id} { allow read: if true; allow write: if false; }
+    match /announcements/{id} { allow read: if true; allow write: if false; }
+    // Push endpoints and device preferences are managed only by Cloud Functions (Admin SDK).
+    match /subscriptions/{uid} { allow read, write: if false; }
+    match /sent_notifications/{id} { allow read, write: if false; }
+  }
+}
