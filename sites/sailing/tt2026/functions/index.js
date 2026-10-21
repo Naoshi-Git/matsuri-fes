@@ -70,12 +70,20 @@ exports.dispatchScheduled=onSchedule({
   secrets:[PUBLIC_KEY,PRIVATE_KEY],maxInstances:1
 },async()=>{
   // No work, no Firestore reads, and no notifications outside this edition's event day.
-  const day=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+  const parts=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(p=>p.type!=="literal").map(p=>[p.type,p.value]));
+  const day=parts.year+"-"+parts.month+"-"+parts.day;
   if(day!==schedule.date)return;
   const now=Date.now();
+  // The public live/status document can adjust the 5-minute notification trigger by venue.
+  const live=await db.doc("live/status").get();
+  const venueOffsets={};
+  for(const v of schedule.venues){
+    const value=Number(live.data()?.venues?.[v.id]?.offsetMinutes)||0;
+    venueOffsets[v.id]=Math.round(Math.max(-60,Math.min(120,value))/5)*5;
+  }
   const upcoming=schedule.events.filter(e=>{
     if(e.kind!=="performance")return false;
-    const due=new Date(schedule.date+"T"+e.time+":00+09:00").getTime()-5*60000;
+    const due=new Date(schedule.date+"T"+e.time+":00+09:00").getTime()+(venueOffsets[e.venue]||0)*60000-5*60000;
     return now>=due&&now<due+110000;
   });
   if(!upcoming.length)return;
@@ -85,7 +93,7 @@ exports.dispatchScheduled=onSchedule({
   await forEachWithLimit(snapshot.docs,15,async doc=>{
     const d=doc.data();if(!d.favoriteAlerts)return;
     for(const ev of upcoming){if(!d.favorites.includes(ev.name))continue;
-      await sendOnce(doc.id,ev.id,{subscription:d.subscription,payload:pushPayload(ev)});
+      await sendOnce(doc.id,ev.id,{subscription:d.subscription,payload:pushPayload({...ev,time:new Date(new Date(schedule.date+"T"+ev.time+":00+09:00").getTime()+(venueOffsets[ev.venue]||0)*60000).toLocaleTimeString("ja-JP",{timeZone:"Asia/Tokyo",hour:"2-digit",minute:"2-digit",hour12:false})})});
     }
   });
 });
