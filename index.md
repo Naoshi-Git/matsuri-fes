@@ -28,3 +28,21 @@ permalink: /
     </div>
   </div>
 </section>
+
+<section class="project-index" aria-labelledby="stage-guide-heading">
+  <div class="index-inner">
+    <p class="section-label" id="stage-guide-heading">PROJECT 02 <span>／</span> STAGE GUIDE</p>
+    <a class="project-card" href="{{ '/sites/sailing/tt2026/' | relative_url }}">
+      <span class="project-card-index">02</span>
+      <span>
+        <h2>Sailing KOBE 2026｜演舞ナビ</h2>
+        <p>メイン・サブ・パレードの3会場を、5分刻みのひとつのタイムラインに。</p>
+      </span>
+      <span class="project-arrow" aria-hidden="true">↗</span>
+    </a>
+    <div class="project-caption">
+      <span>2026大会のTTアーカイブ／お気に入りチーム</span>
+      <span>SAILING KOBE</span>
+    </div>
+  </div>
+</section>
