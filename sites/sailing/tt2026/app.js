@@ -60,7 +60,8 @@
     $("venueOverview").innerHTML=data.venues.map(v=>{
       const {now,next}=atCursor(v.id);
       const title=now?.name||"この時間は演舞予定なし";
-      return '<article class="venue-card"><div class="venue-title"><span>'+esc(v.name)+'</span><span>'+esc(v.short)+'</span></div><div class="venue-now">'+esc(title)+'</div><div class="venue-next">'+(next?"次 "+esc(when(next))+" · "+esc(next.name):"この会場の予定は終了")+'</div></article>';
+      const shift=liveState?.offsetMinutes?.[v.id]||0;
+      return '<article class="venue-card"><div class="venue-title"><span>'+esc(v.name)+'</span><span>'+esc(shift?(shift>0?'+':'')+shift+'分変更':v.short)+'</span></div><div class="venue-now">'+esc(title)+'</div><div class="venue-next">'+(next?"次 "+esc(when(next))+" · "+esc(next.name):"この会場の予定は終了")+'</div></article>';
     }).join("");
   };
   const getSlots = () => {const out=[];for(let m=570;m<=920;m+=5)out.push(m);return out};
@@ -75,7 +76,7 @@
       const time=hhmm(m),isCurrent=m===Math.floor(cursor/5)*5;
       let row='<div class="stage-time '+(isCurrent?'current':'')+'" data-minute="'+m+'">'+time+'</div>';
       for(const v of data.venues){
-        const ev=eventMap.get(v.id+":"+time);
+        const ev=data.events.find(e=>e.venue===v.id&&effectiveMinutes(e)===m);
         const curClass=isCurrent?' current':'';
         if(!ev){row+='<div class="stage-cell is-empty'+curClass+'"></div>';continue;}
         row+='<div class="stage-cell'+curClass+'"><div class="slot-button '+(performance(ev)&&isFavorite(ev.name)?'is-saved ':'')+(ev.kind!=="performance"?"ceremony":"")+'"><button class="team-name slot-title" data-event="'+esc(ev.id)+'" type="button">'+esc(ev.name)+'</button>'+(performance(ev)?star(ev.name):"")+'</div></div>';
@@ -178,8 +179,10 @@
     onSnapshot(doc(getFirestore(app),"live","status"),snap=>{
       const d=snap.exists()?snap.data():null;
       const offsets={};
-      for(const v of data.venues)offsets[v.id]=Math.max(-60,Math.min(120,Number(d?.venues?.[v.id]?.offsetMinutes)||0));
-      liveState=d?{offsetMinutes:offsets,updatedAt:d.updatedAt}:null;
+      const age=typeof d?.updatedAt?.toMillis==="function"?Date.now()-d.updatedAt.toMillis():Infinity;
+      const fresh=today()===data.date && age>=0 && age<15*60000;
+      for(const v of data.venues)offsets[v.id]=fresh?Math.round(Math.max(-60,Math.min(120,Number(d?.venues?.[v.id]?.offsetMinutes)||0))/5)*5:0;
+      liveState=fresh?{offsetMinutes:offsets,updatedAt:d.updatedAt}:null;
       renderOverview();renderTimeline();renderTeams();renderFavorites();renderStatus();
     },err=>console.warn("Live state unavailable",err));
     return firebaseConnection;
@@ -231,7 +234,7 @@
     if(t.date===data.date&&!replay){cursor=Math.max(570,Math.min(920,Math.floor(t.minute/5)*5));renderStatus();renderOverview();renderTimeline();}
     if(t.date!==data.date || replay || !prefs.favoriteAlerts)return;
     const candidates=data.events.filter(e=>performance(e)&&isFavorite(e.name)&&effectiveMinutes(e)-5===t.minute);
-    if(pushActive || Notification?.permission!=="granted")return;
+    if(pushActive || !("Notification" in window) || Notification.permission!=="granted")return;
     for(const ev of candidates){
       const id=data.date+":"+ev.id;
       if(prefs.seen.includes(id))continue;
