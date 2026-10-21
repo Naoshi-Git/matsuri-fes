@@ -102,6 +102,9 @@ exports.finaleAnnouncement=onDocumentWritten({
 },async event=>{
   const before=event.data?.before?.data(),after=event.data?.after?.data();
   if(!after?.published||typeof after.publishVersion!=="number"||after.publishVersion<=0)return;
+  // Archived editions must never broadcast a late or test announcement.
+  const parts=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(p=>p.type!=="literal").map(p=>[p.type,p.value]));
+  if(parts.year+"-"+parts.month+"-"+parts.day!==schedule.date)return;
   if(before?.publishVersion===after.publishVersion&&before?.published===after.published)return;
   const title=typeof after.title==="string"&&after.title.trim()?after.title.trim().slice(0,80):"フィナーレ進出チーム発表";
   const body=typeof after.message==="string"&&after.message.trim()?after.message.trim().slice(0,180):"フィナーレ進出チームが発表されました。";
