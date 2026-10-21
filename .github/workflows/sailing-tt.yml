@@ -1,0 +1,19 @@
+name: Sailing TT validation
+on:
+  push:
+    paths:
+      - 'sites/sailing/tt2026/**'
+      - '.github/workflows/sailing-tt.yml'
+  pull_request:
+    paths:
+      - 'sites/sailing/tt2026/**'
+      - '.github/workflows/sailing-tt.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test sites/sailing/tt2026/tests/*.test.cjs
