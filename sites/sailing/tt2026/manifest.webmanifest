@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Sailing KOBE 2026 演舞ナビ",
+  "short_name": "Sailing TT",
+  "description": "3会場の演舞を5分刻みで追うタイムテーブル",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8fa",
+  "theme_color": "#163d56",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
