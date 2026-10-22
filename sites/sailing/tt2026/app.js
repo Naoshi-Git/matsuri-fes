@@ -5,7 +5,7 @@
   const JST = "Asia/Tokyo";
   const LS = "sailing-tt-2026:v1";
   const $ = id => document.getElementById(id);
-  const symbols = id => '<svg aria-hidden="true"><use href="#i-' + id + '"/></svg>';
+  const symbols = id => '<span class="material-icons" aria-hidden="true">' + ({star:"star_border","star-filled":"star",search:"search"}[id]||"info") + '</span>';
   const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const minutes = time => Number(time.slice(0, 2)) * 60 + Number(time.slice(3, 5));
   const hhmm = n => String(Math.floor(n / 60)).padStart(2, "0") + ":" + String(n % 60).padStart(2, "0");
@@ -71,10 +71,10 @@
     return '<button class="slot-star '+(saved?'is-saved':'')+'" type="button" data-fav="'+index+'" title="'+(saved?'お気に入り解除':'お気に入り登録')+'" aria-label="'+esc(name)+'を'+(saved?'お気に入りから解除':'お気に入りに登録')+'">'+symbols(saved?'star-filled':'star')+'</button>';
   };
   const renderTimeline = () => {
-    const hdr='<div class="stage-th">時刻</div>'+data.venues.map(v=>'<div class="stage-th">'+esc(v.name)+'</div>').join("");
+    const hdr='<div class="stage-th">時刻</div>'+data.venues.map(v=>'<div class="stage-th"><span class="venue-marker venue-'+esc(v.id)+'"></span>'+esc(v.name)+'</div>').join("");
     const rows=getSlots().map(m=>{
       const time=hhmm(m),isCurrent=m===Math.floor(cursor/5)*5;
-      let row='<div class="stage-time '+(isCurrent?'current':'')+'" data-minute="'+m+'">'+time+'</div>';
+      let row='<div class="stage-time '+(isCurrent?'current':'')+'" data-minute="'+m+'">'+(isCurrent?'<span class="now-indicator"></span>':'')+time+'</div>';
       for(const v of data.venues){
         const ev=data.events.find(e=>e.venue===v.id&&effectiveMinutes(e)===m);
         const curClass=isCurrent?' current':'';
