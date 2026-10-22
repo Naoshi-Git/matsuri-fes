@@ -1,4 +1,4 @@
-const CACHE="sailing-2026-v2";
+const CACHE="sailing-2026-v3";
 const ASSETS=["./","./index.html","./style.css","./app.js","./config.js","./icon.svg","./icon-192.png","./manifest.webmanifest","./data/schedule.json"];
 self.addEventListener("install",event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
