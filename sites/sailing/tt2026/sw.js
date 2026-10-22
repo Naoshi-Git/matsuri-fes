@@ -1,5 +1,5 @@
-const CACHE="sailing-2026-v1";
-const ASSETS=["./","./index.html","./style.css","./app.js","./config.js","./icon.svg","./manifest.webmanifest","./data/schedule.json"];
+const CACHE="sailing-2026-v2";
+const ASSETS=["./","./index.html","./style.css","./app.js","./config.js","./icon.svg","./icon-192.png","./manifest.webmanifest","./data/schedule.json"];
 self.addEventListener("install",event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
 });
@@ -26,7 +26,7 @@ self.addEventListener("push",event=>{
   let data={};
   try{data=event.data?.json()||{}}catch(_){data={title:"Sailing KOBE",body:event.data?.text()||""}}
   const title=String(data.title||"Sailing KOBE");
-  const opts={body:String(data.body||"大会からのお知らせ"),icon:"./icon.svg",badge:"./icon.svg",tag:String(data.tag||"sailing-notice"),data:{url:typeof data.url==="string"?data.url:"./"},renotify:false};
+  const opts={body:String(data.body||"大会からのお知らせ"),icon:"./icon-192.png",badge:"./icon-192.png",tag:String(data.tag||"sailing-notice"),data:{url:typeof data.url==="string"?data.url:"./"},renotify:false};
   event.waitUntil(self.registration.showNotification(title,opts));
 });
 self.addEventListener("notificationclick",event=>{
