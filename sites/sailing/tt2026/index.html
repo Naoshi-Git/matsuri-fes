@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Sailing KOBE 2026 | 演舞ナビ</title>
 </head>
@@ -33,7 +34,7 @@
   <header class="app-bar">
     <div class="app-bar-inner">
       <div class="brand"><span class="brand-mark" aria-hidden="true">S</span><span><span class="brand-name">SAILING KOBE</span><span class="brand-sub">2026 / 演舞ナビ</span></span></div>
-      <div class="header-actions"><button class="icon-button" id="aboutButton" aria-label="使い方"><svg><use href="#i-info"/></svg></button><button class="install-button" id="installButton"><svg><use href="#i-home"/></svg><span>ホーム画面に追加</span></button></div>
+      <div class="header-actions"><button class="icon-button" id="aboutButton" aria-label="使い方"><span class="material-icons" aria-hidden="true">info_outline</span></button><button class="install-button" id="installButton"><span class="material-icons" aria-hidden="true">add_to_home_screen</span><span>ホーム画面に追加</span></button></div>
     </div>
   </header>
   <main class="layout">
@@ -51,21 +52,21 @@
         <div class="range-line"><span>9:30</span><input aria-label="表示時刻" id="timeSlider" type="range" min="570" max="920" step="5" value="750"><span>15:20</span></div>
       </div>
       <div class="section-header table-heading"><div><p class="section-kicker">3 STAGES × 5 MIN</p><h2>並行タイムライン</h2></div><button class="text-button" id="jumpCursor">表示時刻へ</button></div>
-      <div class="table-scroller" id="tableScroller"><div class="stage-table" id="stageTable" aria-label="3会場のタイムテーブル"></div></div>
+      <div class="timeline-hint"><span class="material-icons" aria-hidden="true">swipe</span> 左右にスワイプして会場を確認できます</div><div class="table-scroller" id="tableScroller"><div class="stage-table" id="stageTable" aria-label="3会場のタイムテーブル"></div></div>
       <div class="legend"><span><i class="legend-dot live"></i>表示時刻</span><span><i class="legend-dot saved"></i>お気に入り</span><span>時刻はTT上の予定です</span></div>
       <div class="section-header finale-header"><div><p class="section-kicker">FINALE</p><h2>フィナーレ進行</h2></div></div>
       <div class="finale-list" id="finaleList"></div>
     </section>
     <section class="content-panel" id="teamsView" hidden aria-label="チームを探す">
       <div class="section-header"><div><p class="section-kicker">TEAM DIRECTORY</p><h2>出演チーム</h2></div><span class="count-label" id="teamCount"></span></div>
-      <label class="search-field"><svg><use href="#i-search"/></svg><input id="teamSearch" type="search" placeholder="チーム名で検索" autocomplete="off"></label>
+      <label class="search-field"><span class="material-icons" aria-hidden="true">search</span><input id="teamSearch" type="search" placeholder="チーム名で検索" autocomplete="off"></label>
       <div id="teamList" class="team-list"></div>
     </section>
     <section class="content-panel" id="favoritesView" hidden aria-label="お気に入り">
       <div class="section-header"><div><p class="section-kicker">YOUR WATCHLIST</p><h2>お気に入り</h2></div><span class="count-label" id="favoriteCount"></span></div>
       <p class="support-text">星を付けたチームの全会場の出演をまとめて確認できます。</p>
       <div id="favoriteList" class="favorite-list"></div>
-      <section class="notification-card" aria-label="通知設定"><div class="notification-head"><svg><use href="#i-bell"/></svg><div><h3>出演5分前の通知</h3><p id="pushStatus">通知の接続状態を確認中</p></div></div>
+      <section class="notification-card" aria-label="通知設定"><div class="notification-head"><span class="material-icons" aria-hidden="true">notifications_none</span><div><h3>出演5分前の通知</h3><p id="pushStatus">通知の接続状態を確認中</p></div></div>
         <div class="switch-row"><div><strong>お気に入りの出演通知</strong><small>推しチームが各会場に出る5分前</small></div><label class="toggle"><input type="checkbox" id="favoriteAlerts"><span></span></label></div>
         <div class="switch-row"><div><strong>フィナーレ進出発表</strong><small>運営が結果を公開したとき</small></div><label class="toggle"><input type="checkbox" id="finaleAlerts"><span></span></label></div>
         <button id="enablePush" class="filled-button" type="button">通知を設定する</button><button id="testPush" class="text-button" type="button">端末でテスト通知</button>
@@ -75,11 +76,11 @@
     <footer class="footer"><div>Sailing KOBE 2026 · 2026年7月4日</div><div>TT最終更新：2026/05/25 07:53 · <a href="https://www.matsuri-fes.com/Sailing-KOBE" rel="noreferrer" target="_blank">公式サイト <svg><use href="#i-arrow"/></svg></a></div><p>データは公開TTを転記。実際の演舞進行・変更を保証するものではありません。</p></footer>
   </main>
   <nav class="bottom-nav" aria-label="メインメニュー">
-    <button data-tab="timeline" class="nav-item active" aria-current="page"><svg><use href="#i-schedule"/></svg><span>タイムライン</span></button>
-    <button data-tab="teams" class="nav-item"><svg><use href="#i-groups"/></svg><span>チーム</span></button>
-    <button data-tab="favorites" class="nav-item"><svg><use href="#i-star"/></svg><span>お気に入り</span></button>
+    <button data-tab="timeline" class="nav-item active" aria-current="page"><span class="material-icons" aria-hidden="true">schedule</span><span>タイムライン</span></button>
+    <button data-tab="teams" class="nav-item"><span class="material-icons" aria-hidden="true">groups</span><span>チーム</span></button>
+    <button data-tab="favorites" class="nav-item"><span class="material-icons-outlined" aria-hidden="true">star_border</span><span>お気に入り</span></button>
   </nav>
-  <div class="modal-backdrop" id="modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="dialog-header"><h2 id="modalTitle">詳細</h2><button class="icon-button" id="modalClose" aria-label="閉じる"><svg><use href="#i-close"/></svg></button></div><div id="modalBody"></div></section></div>
+  <div class="modal-backdrop" id="modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="dialog-header"><h2 id="modalTitle">詳細</h2><button class="icon-button" id="modalClose" aria-label="閉じる"><span class="material-icons" aria-hidden="true">close</span></button></div><div id="modalBody"></div></section></div>
   <script src="./config.js"></script>
   <script src="./app.js" defer></script>
 </body>
