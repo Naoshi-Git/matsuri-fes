@@ -12,3 +12,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - sites/sailing/tt2026/functions
+  - sites/sailing/tt2026/tests
+  - sites/sailing/tt2026/firebase.json
+  - sites/sailing/tt2026/firestore.rules
+  - sites/sailing/tt2026/AGENTS.md
