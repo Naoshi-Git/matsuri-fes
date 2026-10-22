@@ -1,0 +1,1400 @@
+{
+  "event": "Sailing KOBE 2026",
+  "date": "2026-07-04",
+  "timezone": "Asia/Tokyo",
+  "location": "メリケンパーク（兵庫県神戸市）",
+  "edition": "2026/05/25 07:53 2版",
+  "source": "https://drive.google.com/file/d/1Y8YE9S_FbQe0vc9gQj31nU96PlZbdR1q/view",
+  "crosscheck": "https://drive.google.com/file/d/1CJ-MmhokJQTvi-qdBmp4aKARGgU2XyQq/view",
+  "venues": [
+    {
+      "id": "main",
+      "name": "メイン",
+      "short": "MAIN"
+    },
+    {
+      "id": "sub",
+      "name": "サブ",
+      "short": "SUB"
+    },
+    {
+      "id": "parade",
+      "name": "パレード",
+      "short": "PARADE"
+    }
+  ],
+  "events": [
+    {
+      "id": "main-0935",
+      "venue": "main",
+      "time": "09:35",
+      "name": "オープニング",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-0940",
+      "venue": "main",
+      "time": "09:40",
+      "name": "有閑踊り子一座 飛舞人",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-0940",
+      "venue": "sub",
+      "time": "09:40",
+      "name": "オープニング",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-0945",
+      "venue": "main",
+      "time": "09:45",
+      "name": "大阪大学お祭りダンスサークル祭楽人",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-0945",
+      "venue": "sub",
+      "time": "09:45",
+      "name": "天晴れ",
+      "kind": "performance"
+    },
+    {
+      "id": "main-0950",
+      "venue": "main",
+      "time": "09:50",
+      "name": "よさこいチームかざみどり",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-0950",
+      "venue": "sub",
+      "time": "09:50",
+      "name": "嘉們-KAMON-",
+      "kind": "performance"
+    },
+    {
+      "id": "main-0955",
+      "venue": "main",
+      "time": "09:55",
+      "name": "関学よさこい連 炎流",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-0955",
+      "venue": "sub",
+      "time": "09:55",
+      "name": "京都よさこい連心粋",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1000",
+      "venue": "main",
+      "time": "10:00",
+      "name": "神戸学生よさこいチーム湊",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1000",
+      "venue": "sub",
+      "time": "10:00",
+      "name": "京炎 そでふれ！彩京前線",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1005",
+      "venue": "main",
+      "time": "10:05",
+      "name": "近畿大学洗心",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1005",
+      "venue": "sub",
+      "time": "10:05",
+      "name": "逢坂夢帆",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1010",
+      "venue": "main",
+      "time": "10:10",
+      "name": "祭会",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1010",
+      "venue": "sub",
+      "time": "10:10",
+      "name": "滋賀大学よさこいサークル椛",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1015",
+      "venue": "main",
+      "time": "10:15",
+      "name": "京炎そでふれ！Tacchi",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1015",
+      "venue": "sub",
+      "time": "10:15",
+      "name": "京都文教大学 風竜舞伝",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1020",
+      "venue": "main",
+      "time": "10:20",
+      "name": "粲華",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1020",
+      "venue": "sub",
+      "time": "10:20",
+      "name": "京炎そでふれ！華羅紅",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1025",
+      "venue": "main",
+      "time": "10:25",
+      "name": "煙陣",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1025",
+      "venue": "sub",
+      "time": "10:25",
+      "name": "岡山うらじゃ連 四季",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1030",
+      "venue": "main",
+      "time": "10:30",
+      "name": "勢笑",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1030",
+      "venue": "sub",
+      "time": "10:30",
+      "name": "京都チーム『櫻嵐洛』",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1035",
+      "venue": "main",
+      "time": "10:35",
+      "name": "輝 〜ルミナス〜",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1035",
+      "venue": "sub",
+      "time": "10:35",
+      "name": "京炎そでふれ！縁想來",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1040",
+      "venue": "main",
+      "time": "10:40",
+      "name": "京炎そでふれ！咲産華",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1040",
+      "venue": "sub",
+      "time": "10:40",
+      "name": "有閑踊り子一座 飛舞人",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1045",
+      "venue": "main",
+      "time": "10:45",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "sub-1045",
+      "venue": "sub",
+      "time": "10:45",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-1050",
+      "venue": "main",
+      "time": "10:50",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "sub-1050",
+      "venue": "sub",
+      "time": "10:50",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "main-1055",
+      "venue": "main",
+      "time": "10:55",
+      "name": "ゐちぺぃじ",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1055",
+      "venue": "sub",
+      "time": "10:55",
+      "name": "よさこいチームかざみどり",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1055",
+      "venue": "parade",
+      "time": "10:55",
+      "name": "オープニング",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-1100",
+      "venue": "main",
+      "time": "11:00",
+      "name": "天晴れ",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1100",
+      "venue": "sub",
+      "time": "11:00",
+      "name": "八雲一座",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1100",
+      "venue": "parade",
+      "time": "11:00",
+      "name": "岐阜聖徳学園大学 柳",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1105",
+      "venue": "main",
+      "time": "11:05",
+      "name": "泉台よさこいチーム",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1105",
+      "venue": "sub",
+      "time": "11:05",
+      "name": "天狗ぅ",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1105",
+      "venue": "parade",
+      "time": "11:05",
+      "name": "京炎そでふれ！おどりっつ",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1110",
+      "venue": "main",
+      "time": "11:10",
+      "name": "嘉們-KAMON-",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1110",
+      "venue": "sub",
+      "time": "11:10",
+      "name": "なるたか",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1110",
+      "venue": "parade",
+      "time": "11:10",
+      "name": "岡山うらじゃ連 灯歌",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1115",
+      "venue": "main",
+      "time": "11:15",
+      "name": "京都よさこい連心粋",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1115",
+      "venue": "sub",
+      "time": "11:15",
+      "name": "笑舞",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1115",
+      "venue": "parade",
+      "time": "11:15",
+      "name": "関学よさこい連 炎流",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1120",
+      "venue": "main",
+      "time": "11:20",
+      "name": "一華 -Ikka-",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1120",
+      "venue": "sub",
+      "time": "11:20",
+      "name": "福井大学よっしゃこい",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1120",
+      "venue": "parade",
+      "time": "11:20",
+      "name": "大阪大学お祭りダンスサークル祭楽人",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1125",
+      "venue": "main",
+      "time": "11:25",
+      "name": "同志社大学よさこいサークル『よさ朗』",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1125",
+      "venue": "sub",
+      "time": "11:25",
+      "name": "佛教大学よさこいサークル紫踊屋",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1125",
+      "venue": "parade",
+      "time": "11:25",
+      "name": "大阪公立大学チーム朱蘭",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1130",
+      "venue": "main",
+      "time": "11:30",
+      "name": "龍谷大学華舞龍",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1130",
+      "venue": "sub",
+      "time": "11:30",
+      "name": "岡山うらじゃ連楽鬼",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1130",
+      "venue": "parade",
+      "time": "11:30",
+      "name": "神戸学生よさこいチーム湊",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1135",
+      "venue": "main",
+      "time": "11:35",
+      "name": "銀杏連",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1135",
+      "venue": "sub",
+      "time": "11:35",
+      "name": "和歌山大学よさこいサークル和歌乱",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1135",
+      "venue": "parade",
+      "time": "11:35",
+      "name": "岡山うらじゃ連蓮雫",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1140",
+      "venue": "main",
+      "time": "11:40",
+      "name": "京炎 そでふれ！彩京前線",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1140",
+      "venue": "sub",
+      "time": "11:40",
+      "name": "環温",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1140",
+      "venue": "parade",
+      "time": "11:40",
+      "name": "京炎 そでふれ！志舞踊",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1145",
+      "venue": "main",
+      "time": "11:45",
+      "name": "逢坂夢帆",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1145",
+      "venue": "sub",
+      "time": "11:45",
+      "name": "京炎そでふれ！咲産華",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1145",
+      "venue": "parade",
+      "time": "11:45",
+      "name": "近畿大学洗心",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1150",
+      "venue": "main",
+      "time": "11:50",
+      "name": "京都文教大学 風竜舞伝",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1150",
+      "venue": "sub",
+      "time": "11:50",
+      "name": "半布里",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1150",
+      "venue": "parade",
+      "time": "11:50",
+      "name": "破天荒",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1155",
+      "venue": "main",
+      "time": "11:55",
+      "name": "京都チーム『櫻嵐洛』",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1155",
+      "venue": "sub",
+      "time": "11:55",
+      "name": "ゐちぺぃじ",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1155",
+      "venue": "parade",
+      "time": "11:55",
+      "name": "祭会",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1200",
+      "venue": "main",
+      "time": "12:00",
+      "name": "京炎そでふれ！縁想來",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1200",
+      "venue": "sub",
+      "time": "12:00",
+      "name": "kagura",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1200",
+      "venue": "parade",
+      "time": "12:00",
+      "name": "よさこいチームかざみどり",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1205",
+      "venue": "main",
+      "time": "12:05",
+      "name": "京炎そでふれ！おどりっつ",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1205",
+      "venue": "sub",
+      "time": "12:05",
+      "name": "名古屋大学\"快踊乱舞\"",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1205",
+      "venue": "parade",
+      "time": "12:05",
+      "name": "八雲一座",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1210",
+      "venue": "main",
+      "time": "12:10",
+      "name": "絆百祭",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1210",
+      "venue": "sub",
+      "time": "12:10",
+      "name": "関西大学学生チーム\"漢舞\"",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1210",
+      "venue": "parade",
+      "time": "12:10",
+      "name": "天狗ぅ",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1215",
+      "venue": "main",
+      "time": "12:15",
+      "name": "調",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1215",
+      "venue": "sub",
+      "time": "12:15",
+      "name": "信州大学YOSAKOI祭りサークル和っしょい",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1215",
+      "venue": "parade",
+      "time": "12:15",
+      "name": "二代目よさこいそうらんほたる",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1220",
+      "venue": "main",
+      "time": "12:20",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "sub-1220",
+      "venue": "sub",
+      "time": "12:20",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "parade-1220",
+      "venue": "parade",
+      "time": "12:20",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-1225",
+      "venue": "main",
+      "time": "12:25",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "sub-1225",
+      "venue": "sub",
+      "time": "12:25",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "parade-1225",
+      "venue": "parade",
+      "time": "12:25",
+      "name": "天晴れ",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1230",
+      "venue": "main",
+      "time": "12:30",
+      "name": "岡山うらじゃ連 灯歌",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1230",
+      "venue": "sub",
+      "time": "12:30",
+      "name": "桃山学院大学よさこい連真輝",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1230",
+      "venue": "parade",
+      "time": "12:30",
+      "name": "岡山うらじゃ連 旭",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1235",
+      "venue": "main",
+      "time": "12:35",
+      "name": "京炎 そでふれ！普及チーム",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1235",
+      "venue": "sub",
+      "time": "12:35",
+      "name": "関学よさこい連 炎流",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1235",
+      "venue": "parade",
+      "time": "12:35",
+      "name": "今、ひとたび",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1240",
+      "venue": "main",
+      "time": "12:40",
+      "name": "岐阜聖徳学園大学 柳",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1240",
+      "venue": "sub",
+      "time": "12:40",
+      "name": "大阪大学お祭りダンスサークル祭楽人",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1240",
+      "venue": "parade",
+      "time": "12:40",
+      "name": "舞幻×朔空",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1245",
+      "venue": "main",
+      "time": "12:45",
+      "name": "夜宵",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1245",
+      "venue": "sub",
+      "time": "12:45",
+      "name": "大阪公立大学チーム朱蘭",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1245",
+      "venue": "parade",
+      "time": "12:45",
+      "name": "京炎 そでふれ！彩京前線",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1250",
+      "venue": "main",
+      "time": "12:50",
+      "name": "岡山うらじゃ連蓮雫",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1250",
+      "venue": "sub",
+      "time": "12:50",
+      "name": "神戸学生よさこいチーム湊",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1250",
+      "venue": "parade",
+      "time": "12:50",
+      "name": "縁紀゛",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1255",
+      "venue": "main",
+      "time": "12:55",
+      "name": "破天荒",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1255",
+      "venue": "sub",
+      "time": "12:55",
+      "name": "一華 -Ikka-",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1255",
+      "venue": "parade",
+      "time": "12:55",
+      "name": "環温",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1300",
+      "venue": "main",
+      "time": "13:00",
+      "name": "滋賀大学よさこいサークル椛",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1300",
+      "venue": "sub",
+      "time": "13:00",
+      "name": "近畿大学洗心",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1300",
+      "venue": "parade",
+      "time": "13:00",
+      "name": "京都チーム『櫻嵐洛』",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1305",
+      "venue": "main",
+      "time": "13:05",
+      "name": "京炎そでふれ！華羅紅",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1305",
+      "venue": "sub",
+      "time": "13:05",
+      "name": "祭会",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1305",
+      "venue": "parade",
+      "time": "13:05",
+      "name": "NEPPA",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1310",
+      "venue": "main",
+      "time": "13:10",
+      "name": "八雲一座",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1310",
+      "venue": "sub",
+      "time": "13:10",
+      "name": "京炎そでふれ！おどりっつ",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1310",
+      "venue": "parade",
+      "time": "13:10",
+      "name": "泉台よさこいチーム",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1315",
+      "venue": "main",
+      "time": "13:15",
+      "name": "天狗ぅ",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1315",
+      "venue": "sub",
+      "time": "13:15",
+      "name": "絆百祭",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1315",
+      "venue": "parade",
+      "time": "13:15",
+      "name": "なるたか",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1320",
+      "venue": "main",
+      "time": "13:20",
+      "name": "笑舞",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1320",
+      "venue": "sub",
+      "time": "13:20",
+      "name": "同志社大学よさこいサークル『よさ朗』",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1320",
+      "venue": "parade",
+      "time": "13:20",
+      "name": "kagura",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1325",
+      "venue": "main",
+      "time": "13:25",
+      "name": "福井大学よっしゃこい",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1325",
+      "venue": "sub",
+      "time": "13:25",
+      "name": "二代目よさこいそうらんほたる",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1325",
+      "venue": "parade",
+      "time": "13:25",
+      "name": "輝 〜ルミナス〜",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1330",
+      "venue": "main",
+      "time": "13:30",
+      "name": "佛教大学よさこいサークル紫踊屋",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1330",
+      "venue": "sub",
+      "time": "13:30",
+      "name": "岡山うらじゃ連 旭",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1330",
+      "venue": "parade",
+      "time": "13:30",
+      "name": "京都よさこい連心粋",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1335",
+      "venue": "main",
+      "time": "13:35",
+      "name": "岡山うらじゃ連楽鬼",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1335",
+      "venue": "sub",
+      "time": "13:35",
+      "name": "今、ひとたび",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1335",
+      "venue": "parade",
+      "time": "13:35",
+      "name": "調",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1340",
+      "venue": "main",
+      "time": "13:40",
+      "name": "関西大学学生チーム\"漢舞\"",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1340",
+      "venue": "sub",
+      "time": "13:40",
+      "name": "舞幻×朔空",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1340",
+      "venue": "parade",
+      "time": "13:40",
+      "name": "銀杏連",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1345",
+      "venue": "main",
+      "time": "13:45",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "sub-1345",
+      "venue": "sub",
+      "time": "13:45",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "parade-1345",
+      "venue": "parade",
+      "time": "13:45",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-1350",
+      "venue": "main",
+      "time": "13:50",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "sub-1350",
+      "venue": "sub",
+      "time": "13:50",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "parade-1350",
+      "venue": "parade",
+      "time": "13:50",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "main-1355",
+      "venue": "main",
+      "time": "13:55",
+      "name": "縁紀゛",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1355",
+      "venue": "sub",
+      "time": "13:55",
+      "name": "岡山うらじゃ連蓮雫",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1355",
+      "venue": "parade",
+      "time": "13:55",
+      "name": "嘉們-KAMON-",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1400",
+      "venue": "main",
+      "time": "14:00",
+      "name": "環温",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1400",
+      "venue": "sub",
+      "time": "14:00",
+      "name": "京炎そでふれ！Tacchi",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1400",
+      "venue": "parade",
+      "time": "14:00",
+      "name": "名古屋大学\"快踊乱舞\"",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1405",
+      "venue": "main",
+      "time": "14:05",
+      "name": "大阪公立大学チーム朱蘭",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1405",
+      "venue": "sub",
+      "time": "14:05",
+      "name": "粲華",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1405",
+      "venue": "parade",
+      "time": "14:05",
+      "name": "ゐちぺぃじ",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1410",
+      "venue": "main",
+      "time": "14:10",
+      "name": "NEPPA",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1410",
+      "venue": "sub",
+      "time": "14:10",
+      "name": "岡山うらじゃ連 灯歌",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1410",
+      "venue": "parade",
+      "time": "14:10",
+      "name": "京炎そでふれ！縁想來",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1415",
+      "venue": "main",
+      "time": "14:15",
+      "name": "岡山うらじゃ連 四季",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1415",
+      "venue": "sub",
+      "time": "14:15",
+      "name": "京炎 そでふれ！志舞踊",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1415",
+      "venue": "parade",
+      "time": "14:15",
+      "name": "休憩",
+      "kind": "break"
+    },
+    {
+      "id": "main-1420",
+      "venue": "main",
+      "time": "14:20",
+      "name": "なるたか",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1420",
+      "venue": "sub",
+      "time": "14:20",
+      "name": "煙陣",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1420",
+      "venue": "parade",
+      "time": "14:20",
+      "name": "絆百祭",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1425",
+      "venue": "main",
+      "time": "14:25",
+      "name": "半布里",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1425",
+      "venue": "sub",
+      "time": "14:25",
+      "name": "勢笑",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1425",
+      "venue": "parade",
+      "time": "14:25",
+      "name": "笑舞",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1430",
+      "venue": "main",
+      "time": "14:30",
+      "name": "kagura",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1430",
+      "venue": "sub",
+      "time": "14:30",
+      "name": "輝 〜ルミナス〜",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1430",
+      "venue": "parade",
+      "time": "14:30",
+      "name": "福井大学よっしゃこい",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1435",
+      "venue": "main",
+      "time": "14:35",
+      "name": "岡山うらじゃ連 旭",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1435",
+      "venue": "sub",
+      "time": "14:35",
+      "name": "龍谷大学華舞龍",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1435",
+      "venue": "parade",
+      "time": "14:35",
+      "name": "佛教大学よさこいサークル紫踊屋",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1440",
+      "venue": "main",
+      "time": "14:40",
+      "name": "今、ひとたび",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1440",
+      "venue": "sub",
+      "time": "14:40",
+      "name": "破天荒",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1440",
+      "venue": "parade",
+      "time": "14:40",
+      "name": "岡山うらじゃ連楽鬼",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1445",
+      "venue": "main",
+      "time": "14:45",
+      "name": "舞幻×朔空",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1445",
+      "venue": "sub",
+      "time": "14:45",
+      "name": "銀杏連",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1445",
+      "venue": "parade",
+      "time": "14:45",
+      "name": "同志社大学よさこいサークル『よさ朗』",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1450",
+      "venue": "main",
+      "time": "14:50",
+      "name": "二代目よさこいそうらんほたる",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1450",
+      "venue": "sub",
+      "time": "14:50",
+      "name": "調",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1450",
+      "venue": "parade",
+      "time": "14:50",
+      "name": "一華 -Ikka-",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1455",
+      "venue": "main",
+      "time": "14:55",
+      "name": "和歌山大学よさこいサークル和歌乱",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1455",
+      "venue": "sub",
+      "time": "14:55",
+      "name": "岐阜聖徳学園大学 柳",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1455",
+      "venue": "parade",
+      "time": "14:55",
+      "name": "逢坂夢帆",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1500",
+      "venue": "main",
+      "time": "15:00",
+      "name": "名古屋大学\"快踊乱舞\"",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1500",
+      "venue": "sub",
+      "time": "15:00",
+      "name": "縁紀゛",
+      "kind": "performance"
+    },
+    {
+      "id": "parade-1500",
+      "venue": "parade",
+      "time": "15:00",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "main-1505",
+      "venue": "main",
+      "time": "15:05",
+      "name": "信州大学YOSAKOI祭りサークル和っしょい",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1505",
+      "venue": "sub",
+      "time": "15:05",
+      "name": "京炎 そでふれ！普及チーム",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1510",
+      "venue": "main",
+      "time": "15:10",
+      "name": "桃山学院大学よさこい連真輝",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1510",
+      "venue": "sub",
+      "time": "15:10",
+      "name": "NEPPA",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1515",
+      "venue": "main",
+      "time": "15:15",
+      "name": "京炎 そでふれ！志舞踊",
+      "kind": "performance"
+    },
+    {
+      "id": "sub-1515",
+      "venue": "sub",
+      "time": "15:15",
+      "name": "夜宵",
+      "kind": "performance"
+    },
+    {
+      "id": "main-1520",
+      "venue": "main",
+      "time": "15:20",
+      "name": "総踊り",
+      "kind": "ceremony"
+    },
+    {
+      "id": "sub-1520",
+      "venue": "sub",
+      "time": "15:20",
+      "name": "総踊り",
+      "kind": "ceremony"
+    }
+  ],
+  "finale": [
+    {
+      "time": "16:55",
+      "name": "フィナーレオープニング"
+    },
+    {
+      "time": "17:00",
+      "name": "フィナーレチーム発表",
+      "approximate": true
+    },
+    {
+      "time": "17:10",
+      "name": "審査員特別賞発表"
+    },
+    {
+      "time": "17:20",
+      "name": "審査員特別賞 表彰式"
+    },
+    {
+      "time": "17:30",
+      "name": "審査員紹介"
+    },
+    {
+      "time": "17:35",
+      "name": "フィナーレ演舞",
+      "approximate": true
+    },
+    {
+      "time": "18:35",
+      "name": "特別枠",
+      "approximate": true
+    },
+    {
+      "time": "19:00",
+      "name": "結果発表・表彰式"
+    },
+    {
+      "time": "19:20",
+      "name": "大賞演舞"
+    },
+    {
+      "time": "19:30",
+      "name": "総踊り"
+    },
+    {
+      "time": "19:40",
+      "name": "エンディング"
+    }
+  ]
+}

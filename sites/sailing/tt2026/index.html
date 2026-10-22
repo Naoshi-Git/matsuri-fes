@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#163d56">
+  <meta name="description" content="Sailing KOBE 2026の3会場・5分刻みの演舞を見渡せるタイムテーブル。推しチームを保存して出演を追跡。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Sailing TT">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Sailing KOBE 2026 | 演舞ナビ</title>
+</head>
+<body>
+  <svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-schedule" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm-1 2v7l5 3 1-1.7-4-2.3V6z"/></symbol>
+    <symbol id="i-groups" viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-2.3-7.3A6 6 0 0 1 15 8a6 6 0 0 1-.7 2.8c.5.1 1.1.2 1.7.2zM8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-7 1.7-7 4v3h14v-3c0-2.3-3.7-4-7-4zm8 0c-.8 0-1.7.1-2.5.4 2.2 1.1 3.5 2.6 3.5 4.6v2h6v-3c0-2.3-3.7-4-7-4z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.4 7.1 1-5.1 5 .9 7.1-6-3.4-6.2 3.4 1.1-7.1-5.1-5 7.1-1L12 2zm0 4.5-1.8 3.7-4 .6 2.9 2.8-.7 4 3.6-1.9 3.5 1.9-.7-4 2.9-2.8-4-.6z"/></symbol>
+    <symbol id="i-star-filled" viewBox="0 0 24 24"><path d="m12 2 3.1 6.4 7.1 1-5.1 5 .9 7.1-6-3.4-6.2 3.4 1.1-7.1-5.1-5 7.1-1z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11a6 6 0 0 0-5-5.9V4a1 1 0 0 0-2 0v1.1A6 6 0 0 0 6 11v5l-2 2v1h16v-1zm-10 1 1-1v-5a3 3 0 0 1 6 0v5l1 1z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4l5.6 5.6 1.4-1.4-5.6-5.6z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><path d="M11 10h2v7h-2zm0-4h2v2h-2zm1-4a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m12 2 10 9h-3v10h-6v-7h-2v7H5V11H2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 4v3h6.6L4 21l-1.4-1.4L17.2 6H11V4z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 1 0-.7.7l.3.3v.8l5 5 1.5-1.5zM10 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></symbol>
+  </svg>
+  <header class="app-bar">
+    <div class="app-bar-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">S</span><span><span class="brand-name">SAILING KOBE</span><span class="brand-sub">2026 / 演舞ナビ</span></span></div>
+      <div class="header-actions"><button class="icon-button" id="aboutButton" aria-label="使い方"><svg><use href="#i-info"/></svg></button><button class="install-button" id="installButton"><svg><use href="#i-home"/></svg><span>ホーム画面に追加</span></button></div>
+    </div>
+  </header>
+  <main class="layout">
+    <section class="intro" aria-label="大会情報">
+      <div class="eyebrow">JUL 04, 2026 · MERIKEN PARK</div>
+      <div class="title-row"><h1>演舞タイムテーブル</h1><span class="status-chip" id="statusChip">読み込み中</span></div>
+      <p class="intro-detail">メイン・サブ・パレードの演舞を、ひとつの時間軸で。</p>
+    </section>
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+    <section class="content-panel" id="timelineView" aria-label="タイムテーブル">
+      <div class="section-header"><div><p class="section-kicker">STAGE OVERVIEW</p><h2>会場の進行</h2></div><span id="cursorLabel" class="cursor-label">--:--</span></div>
+      <div class="venue-overview" id="venueOverview"></div>
+      <div class="playback-controls" id="playbackControls">
+        <div class="control-head"><div><strong id="playbackTitle">タイムライン</strong><p id="playbackHelp">大会当日の予定時刻を表示します。</p></div><button id="followNowButton" class="text-button" hidden>現在時刻に戻る</button></div>
+        <div class="range-line"><span>9:30</span><input aria-label="表示時刻" id="timeSlider" type="range" min="570" max="920" step="5" value="750"><span>15:20</span></div>
+      </div>
+      <div class="section-header table-heading"><div><p class="section-kicker">3 STAGES × 5 MIN</p><h2>並行タイムライン</h2></div><button class="text-button" id="jumpCursor">表示時刻へ</button></div>
+      <div class="table-scroller" id="tableScroller"><div class="stage-table" id="stageTable" aria-label="3会場のタイムテーブル"></div></div>
+      <div class="legend"><span><i class="legend-dot live"></i>表示時刻</span><span><i class="legend-dot saved"></i>お気に入り</span><span>時刻はTT上の予定です</span></div>
+      <div class="section-header finale-header"><div><p class="section-kicker">FINALE</p><h2>フィナーレ進行</h2></div></div>
+      <div class="finale-list" id="finaleList"></div>
+    </section>
+    <section class="content-panel" id="teamsView" hidden aria-label="チームを探す">
+      <div class="section-header"><div><p class="section-kicker">TEAM DIRECTORY</p><h2>出演チーム</h2></div><span class="count-label" id="teamCount"></span></div>
+      <label class="search-field"><svg><use href="#i-search"/></svg><input id="teamSearch" type="search" placeholder="チーム名で検索" autocomplete="off"></label>
+      <div id="teamList" class="team-list"></div>
+    </section>
+    <section class="content-panel" id="favoritesView" hidden aria-label="お気に入り">
+      <div class="section-header"><div><p class="section-kicker">YOUR WATCHLIST</p><h2>お気に入り</h2></div><span class="count-label" id="favoriteCount"></span></div>
+      <p class="support-text">星を付けたチームの全会場の出演をまとめて確認できます。</p>
+      <div id="favoriteList" class="favorite-list"></div>
+      <section class="notification-card" aria-label="通知設定"><div class="notification-head"><svg><use href="#i-bell"/></svg><div><h3>出演5分前の通知</h3><p id="pushStatus">通知の接続状態を確認中</p></div></div>
+        <div class="switch-row"><div><strong>お気に入りの出演通知</strong><small>推しチームが各会場に出る5分前</small></div><label class="toggle"><input type="checkbox" id="favoriteAlerts"><span></span></label></div>
+        <div class="switch-row"><div><strong>フィナーレ進出発表</strong><small>運営が結果を公開したとき</small></div><label class="toggle"><input type="checkbox" id="finaleAlerts"><span></span></label></div>
+        <button id="enablePush" class="filled-button" type="button">通知を設定する</button><button id="testPush" class="text-button" type="button">端末でテスト通知</button>
+        <p class="small-note" id="pushHelp">実際のプッシュ配信には通知サーバーとの接続が必要です。</p>
+      </section>
+    </section>
+    <footer class="footer"><div>Sailing KOBE 2026 · 2026年7月4日</div><div>TT最終更新：2026/05/25 07:53 · <a href="https://www.matsuri-fes.com/Sailing-KOBE" rel="noreferrer" target="_blank">公式サイト <svg><use href="#i-arrow"/></svg></a></div><p>データは公開TTを転記。実際の演舞進行・変更を保証するものではありません。</p></footer>
+  </main>
+  <nav class="bottom-nav" aria-label="メインメニュー">
+    <button data-tab="timeline" class="nav-item active" aria-current="page"><svg><use href="#i-schedule"/></svg><span>タイムライン</span></button>
+    <button data-tab="teams" class="nav-item"><svg><use href="#i-groups"/></svg><span>チーム</span></button>
+    <button data-tab="favorites" class="nav-item"><svg><use href="#i-star"/></svg><span>お気に入り</span></button>
+  </nav>
+  <div class="modal-backdrop" id="modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="dialog-header"><h2 id="modalTitle">詳細</h2><button class="icon-button" id="modalClose" aria-label="閉じる"><svg><use href="#i-close"/></svg></button></div><div id="modalBody"></div></section></div>
+  <script src="./config.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
